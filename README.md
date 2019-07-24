@@ -6,6 +6,7 @@ Architecture Diagram
 
 In the Web Layer There are two Controllers:
     - Rest to Serve the API Requests
+    
     - Normal Controller for the static content like Angular Files.
 
 
