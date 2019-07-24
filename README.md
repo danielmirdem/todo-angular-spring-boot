@@ -1,6 +1,6 @@
 # todo-angular-spring-boot
 
-Architecture Diagram
+# Architecture Diagram
 
 ![Test Image 1](Architecture.png)
 
@@ -10,7 +10,7 @@ In the Web Layer There are two Controllers:
     - Normal Controller for the static content like Angular Files.
 
 
-Domain 
+# Domain 
 
 	Todo:
     - id
@@ -22,7 +22,7 @@ Domain
     - username
 
 
-Technologies:
+# Technologies:
 
     Angular 7, Java EE 8,  Spring Framework, Spring Boot-Tomcat,  Spring Security, JPA-Hibernate, HSQL 
     (all the latest available ones).
@@ -33,5 +33,5 @@ Technologies:
 
 
 
-Security (Spring-Security):
+# Security (Spring-Security):
     JWT (Jason Web Token) Http Auth: (User: daniel, password: dummy)
