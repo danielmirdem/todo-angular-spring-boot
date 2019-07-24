@@ -1,0 +1,57 @@
+<H1>Todo</H1>
+<hr>
+<div class="container">
+	<div class="alert alert-warning" *ngIf="todoForm.dirty && todoForm.invalid">Enter valid values</div>
+	<div class="alert alert-warning" *ngIf="todoForm.dirty && targetDate.invalid">Enter valid Target Date</div>
+	<div class="alert alert-warning" *ngIf="todoForm.dirty && description.invalid">Enter at least 5 characters in Description</div>
+
+	<form (ngSubmit)="!todoForm.invalid && saveTodo()" #todoForm="ngForm">
+		<div class="row">
+			<div class="col-md-9">	
+				<fieldset class="form-group">
+					<label>Description</label>
+					<input type="text" #description="ngModel" 
+					[(ngModel)]="todo.description" class="form-control" name="description" required="required" minlength="5">
+				</fieldset>
+			</div>
+		</div>
+
+		<div class="row">	
+			<div class="col-md-3">	
+				<fieldset class="form-group">
+					<label>Target Date</label>
+					<input type="date" #targetDate="ngModel" [min]="today"
+					[ngModel]="todo.targetDate | date:'yyyy-MM-dd'" (ngModelChange)="todo.targetDate = $event" class="form-control" name="targetDate" required="required">
+				</fieldset>
+			</div>
+		</div>
+
+		<div class="row">	
+			<div class="col-md-9">	
+				<fieldset class="form-group">
+					<label>Comment</label>
+					<textarea rows="4" cols="50" class="form-control" name="comment" [(ngModel)]="todo.comment">
+					</textarea>	
+				</fieldset>
+			</div>
+		</div>
+
+		<div class="row">	
+			<div class="col-md-3">				
+				<fieldset class="form-group">
+					<input type="checkbox" name="done" [(ngModel)] = "todo.done"> Done
+				</fieldset>
+			</div>
+		</div>
+
+		<hr>
+		<div class="row">
+			<div class="col-md-4 col-lg-2">	
+				<button type="submit" class="btn btn-success">Save</button>
+			</div>
+			<div class="col-md-4 col-lg-2">	
+				<a routerLink="/todos" class="nav-link">Return to List</a>
+			</div>
+		</div>
+	</form>
+</div>
