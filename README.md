@@ -1,5 +1,6 @@
 # Agular 7 - Spring Boot, Java 8
 
+
 # Architecture Diagram
 
 ![Test Image 1](Architecture.png)
