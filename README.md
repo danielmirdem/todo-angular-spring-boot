@@ -1,4 +1,4 @@
-# todo-angular-spring-boot
+# Agular 7 - Spring Boot, Java 8
 
 # Architecture Diagram
 
