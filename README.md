@@ -36,3 +36,8 @@ In the Web Layer There are two Controllers:
 
 # Security (Spring-Security):
     JWT (Jason Web Token) Http Auth: (User: daniel, password: dummy)
+
+
+# Sreenshot:
+
+![Test Image 1](screenshot.PNG)
